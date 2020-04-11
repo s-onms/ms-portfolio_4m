@@ -1,0 +1,16 @@
+<div class="contents row">
+
+  <% @tweets.each do |tweet| %>
+  <%# each文で全てのツイートを表示させる %>
+    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+      <%= simple_format(tweet.text) %>
+      <%# sinple_format使うことによって「改行」になる %>
+
+      <span class="name">
+        <%= tweet.name %>
+      </span>
+      <%# spanはdivみたいなもん %>
+    </div>
+  <% end %>
+</div>
+<%# git ステータスの検証の為追記 %>
