@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-
+  
   # 作ったコントローラー（tweets）にアクション（index）を設定する
   def index
     @tweets = Tweet.all
