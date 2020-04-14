@@ -23,11 +23,12 @@ class TweetsController < ApplicationController
 
   def destroy
     tweet = Tweet.find(params[:id])
-    # ?なんで小文字でいいの
     tweet.destroy
   end
 
+  def search
 
+  end
 
   # 未だわからん
   private
