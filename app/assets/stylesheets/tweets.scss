@@ -5,14 +5,14 @@
   &__mainVisual{
     position: relative;
     &__content{
-      background-color: cover;
+      // background-color: cover;
       width: 100vw;
-      height: 960px;
+      height: 1040px;
       // background-color: cornflowerblue;
 
       background-image:url('./2020_04_15_13.01.45.jpg') ;
       // ↑image-urlだった
-      background-color: cornflowerblue;
+      
     }
     &__subtitle{
       position: absolute;
