@@ -27,8 +27,8 @@ class TweetsController < ApplicationController
   end
 
   def search
-
   end
+  
 
   # 未だわからん
   private

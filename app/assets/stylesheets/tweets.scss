@@ -1,3 +1,48 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.k_main{
+  &__mainVisual{
+    position: relative;
+    &__content{
+      background-color: cover;
+      width: 100vw;
+      height: 960px;
+      // background-color: cornflowerblue;
+
+      background-image:url('./2020_04_15_13.01.45.jpg') ;
+      // ↑image-urlだった
+      background-color: cornflowerblue;
+    }
+    &__subtitle{
+      position: absolute;
+      top: 200px;
+      left: 500px;
+      font-size: 60px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      color: #fff;
+      line-height: 1.2;
+
+      &__text{
+        position: absolute;
+        font-size: 18px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        top: 270px;
+        left:500px;
+        color: #fff;
+        margin: 16px 0 0 0;
+      }
+      &__btn{
+        position: absolute;
+        margin: 24px 0 0 0;
+        &__a{
+          width: 180px;
+          margin-right: 10px;
+        }
+        &__b{
+          width: 180px;
+        }
+      }
+    }
+  }
+}
