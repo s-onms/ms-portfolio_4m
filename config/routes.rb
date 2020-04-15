@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   # resources :tweets, only: [:index, :new, :create]
   # 投稿をテーブルに保存したいので「create」アクションを追加する
 
-  resources :tweets, only: [:index, :new, :create, :destroy]
+  resources :tweets, only: [:index, :new, :create, :destroy, :edit, :update]
+
   # 削除機能追加する為デストロイ追加
+  # 編集機能を追加edit
   resources :tweets do
     collection do
       get 'search'

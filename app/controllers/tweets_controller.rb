@@ -21,15 +21,26 @@ class TweetsController < ApplicationController
     # モデルのクラス.アクション名(引数として保存するデータの値を用意)
   end
 
+  # 未だわからん
   def destroy
     tweet = Tweet.find(params[:id])
     tweet.destroy
   end
 
+  # 未だわからん
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
+  # 未だわからん
+  def update
+    tweet = Tweet.find(params[:id])
+    tweet.update(tweet_params)
+  end
+
   def search
   end
   
-
   # 未だわからん
   private
   # プライベートメソッドはアクセスを制約する為のメソッド
