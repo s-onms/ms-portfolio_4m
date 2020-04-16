@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_action :set_tweet, only: [:edit, :show]
+
 
   # 作ったコントローラー（tweets）にアクション（index）を設定する
   def index
@@ -23,19 +25,27 @@ class TweetsController < ApplicationController
 
   # 未だわからん
   def destroy
+    # インスタンスがいらないのは別画面にならないから別に不要だから（多分）
     tweet = Tweet.find(params[:id])
     tweet.destroy
   end
 
   # 未だわからん
   def edit
-    @tweet = Tweet.find(params[:id])
+    # @tweet = Tweet.find(params[:id])
   end
 
   # 未だわからん
   def update
+    # デストロイ同様、インスタンスがいらないのは別画面にならないから別に不要だから（多分）
     tweet = Tweet.find(params[:id])
     tweet.update(tweet_params)
+  end
+
+  def show
+    # ↓ここはeditと同じなのは、なんで？
+    # 同じだからbefore actionでまとめる
+    # @tweet = Tweet.find(params[:id])
   end
 
   def search
@@ -51,8 +61,11 @@ class TweetsController < ApplicationController
     params.require(:tweet).permit(:name, :image, :text)
     # 1：requireがparamsの中に指定の値があるかチェックする
     # 2：permitが:name以下の項目が用意されているかチェックする
-
   end
 
+  # before actionを定義したらこれが最後にいる今回は2つしか同じとこないから、メリットない
+  def set_tweet
+    @tweet = Tweet.find(params[:id]) 
+  end
   
 end
