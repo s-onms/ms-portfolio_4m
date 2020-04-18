@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  # rails g deviseコマンドでUserモデルを作成すると自動でルーティングが作成される
+
+
   root to:'tweets#index'
   # 最初の画面にルーティングを設定した（よく使う画面であればどこでもいい）
   # root to: 'コントローラ名#アクション名'  (1)
@@ -28,4 +32,7 @@ Rails.application.routes.draw do
   # 詳細画面update ↓下記にまとめる(7アクション全部実装の為)
   resources :tweets
 
+  # usersコントローラーのshowアクションを動かせるように設定
+  # 現在ログイン中のユーザーの投稿のみが表示するマイページの部分
+  resources :users, only: :show
 end
