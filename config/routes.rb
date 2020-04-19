@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root     'コントローラ名#アクション名'  (2)短縮系
 
   # showアクション追加したらエラーになった
-  # 自作アクションを先に読み込むように上に記載したら改善（なぜ？）
+  # 自作アクションsearchを先に読み込むように上に記載したら改善（なぜ？）
   resources :tweets do
     collection do
       get 'search'
@@ -18,21 +18,17 @@ Rails.application.routes.draw do
   # resources :tweets, only: :index
   # パスの指定「twwets」
   # アクションは「index」
+  # 新規画面を追加したい「new」アクション
+  # 投稿をテーブルに保存したい「create」アクション
+  # 削除機能追加したい「destroy」アクション
+  # 編集機能を追加したい「edit」アクション
+  # 詳細画面を追加したい「update」アクション
 
-  # resources :tweets, only: [:index, :new]
-  # 新規画面を追加したいので「new」アクションを追加する
-
-  # resources :tweets, only: [:index, :new, :create]
-  # 投稿をテーブルに保存したいので「create」アクションを追加する
-
-  # resources :tweets, only: [:index, :new, :create, :destroy, :edit, :update ]
-  
-  # 削除機能追加する為デストロイ追加
-  # 編集機能を追加edit
-  # 詳細画面update ↓下記にまとめる(7アクション全部実装の為)
+  # ↓下記にまとめる(7アクション全部実装の為)
   resources :tweets
 
   # usersコントローラーのshowアクションを動かせるように設定
-  # 現在ログイン中のユーザーの投稿のみが表示するマイページの部分
+  # 現在ログイン中のユーザーの投稿のみが表示
+  # マイページの部分
   resources :users, only: :show
 end
