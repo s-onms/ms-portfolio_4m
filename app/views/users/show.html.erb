@@ -3,13 +3,12 @@
   <p><%= @nickname %>さんの投稿一覧</p>
 
   <% @tweets.each do |tweet| %>
-    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
-      <%= simple_format(tweet.text) %>
-      <%# <span class="name"><%= tweet.name</span>  %>
-      <%# ↑削除。ツイートテーブルで「nameカラム」不要になったから %>
-    </div>
-  <% end %>
+    <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
+    <%# マイページも部分テンプレート使用して、マイページ内で編集等出来るように設定 %>
 
+    <%# <span class="name"><%= tweet.name</span>  %>
+    <%# ↑削除。ツイートテーブルで「nameカラム」不要になったから %>
+  <% end %>
   <%= paginate(@tweets) %>
   <%# マイページ側にもページネーション追加 %>
 

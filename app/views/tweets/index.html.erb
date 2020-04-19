@@ -2,43 +2,10 @@
 
   <% @tweets.each do |tweet| %>
     <%# each文で全てのツイートを表示させる %>
-    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
-      <div class="more">
-        <ul class="more_list">
 
-          <%# 詳細は誰でもいつでも見れるようにしたまま %>
-          <li>
-            <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get %>
-          </li>
-
-          <%# ログインして且つ、現在のアカウントユーザー＝投稿者であれば編集等OKにする %>
-          <% if user_signed_in? && current_user.id == tweet.user_id %>
-            <li>
-              <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
-            </li>
-            <li>
-              <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get %>
-            </li>
-          <% end %>
-
-        </ul>
-      </div>
-
-      <%= simple_format(tweet.text) %>
-      <%# sinple_format使うことによって「改行」になる %>
-
-      <span class="name">
-        <a href="/users/<%= tweet.user.id %>">
-        <%# 「ツイートしたユーザーID」の「ユーザーのページ（専用のページ）」に移動する %>
-
-          <span>ニックネーム</span><%= tweet.user.nickname %>
-          <%# リンク先の表示を何にするかは自由（例 ニックネーム、IDとか) %>
-        </a>
-      </span>
-      
-    </div>
+    <%= render partial: "tweet", locals: { tweet: tweet } %>
+    <%# each〜endの間を全部、部分テンプレートで置き換え。可読性アップ。 %>
   <% end %>
-
   <%= paginate(@tweets) %>
   <%# paginateメソッド：ページネーションのリンクを表示したいときに使用するメソッド %>
 </div>
