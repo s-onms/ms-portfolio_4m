@@ -15,10 +15,10 @@ class TweetsController < ApplicationController
     # ↑def アクション名
     # インスタンス変数（にしたテーブル名） =全てのレコードを渡す
 
-    @tweets = Tweet.includes(:user)
-    # ツイート表示する際、アソシエーションを利用して投稿者のニックネームが表示されるようになったので、nameカラムは不要
-
-
+    @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(8)
+    # 1：includesメソッド：ツイート表示する際、アソシエーションを利用して投稿者のニックネームが表示されるように「ユーザー情報」を「先に読み込む」設定
+    # 2：orderメソッド：順番を変更
+    # 3：ページネーション
   end
 
   def new
@@ -79,12 +79,8 @@ class TweetsController < ApplicationController
     # mergeメソッドで2つのハッシュ（ユーザーID）を統合
 
     params.require(:tweet).permit(:image, :text).merge(user_id: current_user.id)
-    # :nameを削除
-
-
-
-
-    
+    # :nameカラムを削除
+    # それにより、「ツイートの保存時」にnameカラムに情報を保存しないよう変更
 
   end
 
