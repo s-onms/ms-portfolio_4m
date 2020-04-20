@@ -23,9 +23,19 @@
     
     <%= simple_format(@tweet.text) %>
     <span class="name">
-      <a href="/users/<%= @tweet.user.id %>">
-        <span>ニックネーム</span><%= @tweet.user.nickname %>
-      </a>
+      <%# <a href="/users/<%= @tweet.user.id %>
+      <span>ニックネーム</span><%= @tweet.user.nickname %>
     </span>
+  </div>
+  <%# ↓コメント機能のビュー %>
+  <div class="container">
+    <% if current_user %>
+      <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメント投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
   </div>
 </div>

@@ -22,13 +22,19 @@ Rails.application.routes.draw do
   # 投稿をテーブルに保存したい「create」アクション
   # 削除機能追加したい「destroy」アクション
   # 編集機能を追加したい「edit」アクション
-  # 詳細画面を追加したい「update」アクション
+  # 更新機能を追加したい「update」アクション
+  # 詳細画面を追加したい「show」アクション
 
   # ↓下記にまとめる(7アクション全部実装の為)
-  resources :tweets
+  resources :tweets do
+    resources :comments, only: :create
+    # コメントテーブルのルーティング
+    # ネストにする
+  end
 
-  # usersコントローラーのshowアクションを動かせるように設定
-  # 現在ログイン中のユーザーの投稿のみが表示
-  # マイページの部分
   resources :users, only: :show
+  # マイページの部分
+  # 個別のページ（詳細ページ）を表示したい「show」アクション
+  
+
 end

@@ -1,3 +1,5 @@
+# 基本ここはツイートモデルのコントローラーを作成しているから、「tweetクラス」＋アクション名
+
 class TweetsController < ApplicationController
   # 同じ記載なのでset_tweetの行でまとめる
   before_action :set_tweet, only: [:edit, :show]
@@ -27,17 +29,21 @@ class TweetsController < ApplicationController
     # 単数！
   end
   
-  # 未だわからん
+  # 少し分かった
   def create
+    # 大文字、小文字
     Tweet.create(tweet_params)
-    # モデルのクラス.アクション名(引数として保存するデータの値を用意)
+    # 「モデルのクラス名.アクション名」で、引数として保存するデータの値を用意
+    # ツイートの箱を作るというイメージ
+    
   end
 
-  # 未だわからん
+  # 少し分かった
   def destroy
     # インスタンスがいらないのは別画面にならないから別に不要だから（多分）
     tweet = Tweet.find(params[:id])
     tweet.destroy
+    # findはどれにするか対象を選択する（IDの箱を見つけ出す）時に使うイメージ
   end
 
   # 未だわからん
@@ -56,6 +62,10 @@ class TweetsController < ApplicationController
     # ↓ここはeditと同じなのは、なんで？
     # 同じだからbefore actionでまとめる
     # @tweet = Tweet.find(params[:id])
+
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
+    # コメント機能追加
   end
 
   def search

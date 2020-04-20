@@ -24,7 +24,6 @@ $gray: #D8D8D8;
 $lightGray: #f5f5f3;
 $white: white;
 
-
 //mixin
 
 @mixin boxBase($margin: 30px auto, $padding: 10px) {
@@ -88,11 +87,12 @@ a {
 }
 
 .btn {
-    @include basePadding(8px 20px);
-    font-size: 14px;
-    border: 2px solid $accent;
-    color: $accent;
-    font-weight: bold;
+    @include basePadding(9px 10px);
+    font-size: 17px;
+    border: 3px solid cornflowerblue
+    ;
+    color: cornflowerblue;
+    font-weight: normal;
     text-align: center;
     border-radius: 3px;
     display: inline-block;
@@ -118,7 +118,6 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
-
 header.header {
   @include basePadding;
   border-bottom: 1px solid $gray;
@@ -128,7 +127,7 @@ header.header {
   left: 0;
   right: 0;
   z-index: 5;
-  height: 62px;
+  height: 75px;
   div.header__bar.row {
     position: relative;
     h1.grid-6 {
@@ -164,6 +163,7 @@ header.header {
       font-size: 1em;
       cursor: pointer;
       position: relative;
+      padding:10px 10px 0 0;
       &:after {
         content: '▼';
         font-size: .7em;
@@ -260,7 +260,7 @@ div.contents.row {
       ul.more_list {
         position: absolute;
         text-align: left;
-        width: 80px;
+        width: 85px;
         right: 0;
         font-size: 12px;
         background-color: #fff;
@@ -392,4 +392,23 @@ footer {
   .search-btn {
     width: 10%;
   }
+}
+
+// ヘッダー幅
+.header__bar.row{
+  max-width: 1100px;
+}
+
+// ページネーション
+.pagination{
+  font-size: 18px;
+}
+
+// マイページニックネーム
+.show_nickname{
+  font-size:18px ;
+  padding: 10px 0 0 0;
+}
+h1.grid-6{
+  padding: 6px 0 0 0;
 }
