@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   # mergeメソッドを作ったら下記でアソシエーションを各々作る
   has_many :tweets
+  has_many :comments  
+  # commentsテーブルとのアソシエーション
 
-  
 end
