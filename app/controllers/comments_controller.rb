@@ -1,13 +1,13 @@
 class CommentsController < ApplicationController
 
   def create
-    
+    comment = Comment.create(comment_params)
     # Comment.create(comment_params)
     # ↑大文字、小文字
     # ↓に書き換え 理由？
     # binding.pry
 
-    comment = Comment.create(comment_params)
+    
     # これから作るから、find（IDの箱を見つけ出す）やIDは不要
     # これから、コメントの箱を作るというイメージ
 
