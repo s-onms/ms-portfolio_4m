@@ -15,6 +15,8 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+
   # resources :tweets, only: :index
   # パスの指定「twwets」
   # アクションは「index」
@@ -24,11 +26,16 @@ Rails.application.routes.draw do
   # 編集機能を追加したい「edit」アクション
   # 更新機能を追加したい「update」アクション
   # 詳細画面を追加したい「show」アクション
-
   # ↓下記にまとめる(7アクション全部実装の為)
   resources :tweets do
     resources :comments, only: :create
     # コメントテーブルのルーティング
+    # ネストにする（イメージ：既にあるビューに追加する場合）
+
+    collection do
+      get 'serch_function'
+    end
+    # 検索機能のルーティング
     # ネストにする
   end
 
