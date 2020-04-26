@@ -8,11 +8,17 @@ Rails.application.routes.draw do
   # root to: 'コントローラ名#アクション名'  (1)
   # root     'コントローラ名#アクション名'  (2)短縮系
 
+  namespace :tweets do
+    resources :searches, only: :index
+  end
+  # 検索機能にnamespaceを追加
+  # namespace :ディレクトリ名 do ~ endと囲む形でルーティングを記述し、そのディレクトリ内のコントローラーのアクションを指定
+
   # showアクション追加したらエラーになった
   # 自作アクションsearchを先に読み込むように上に記載したら改善（なぜ？）
   resources :tweets do
     collection do
-      get 'search'
+      get 'plus'
     end
   end
 
@@ -32,11 +38,13 @@ Rails.application.routes.draw do
     # コメントテーブルのルーティング
     # ネストにする（イメージ：既にあるビューに追加する場合）
 
-    collection do
-      get 'serch_function'
-    end
+    # collection do
+    #   get 'search'
+    # end
     # 検索機能のルーティング
     # ネストにする
+    # nammespaceに集約する為不要
+
   end
 
   resources :users, only: :show

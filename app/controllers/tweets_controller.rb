@@ -7,7 +7,7 @@ class TweetsController < ApplicationController
   # 最初はインデックス、showアクション以外は初期画面に移動。
   # インデックスを除くのはもうそこにいてるから
   # showを除くのはログインしてなくても見れるようにするから
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
 
   # 作ったコントローラー（tweets）にアクション（index）を設定する
@@ -18,9 +18,9 @@ class TweetsController < ApplicationController
     # インスタンス変数（にしたテーブル名） =全てのレコードを渡す
 
     @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(8)
-    # 1：includesメソッド：ツイート表示する際、アソシエーションを利用して投稿者のニックネームが表示されるように「ユーザー情報」を「先に読み込む」設定
-    # 2：orderメソッド：順番を変更
-    # 3：ページネーション
+    # 1：includesメソッド：ツイート表示する際、アソシエーションを利用して投稿者のニックネームが表示されるように「ユーザー情報」を「先に読み込む」設定にして反映させる
+    # 2：orderメソッド：順番を変更(最新が上に)
+    # 3：ページネーション（8投稿毎に次ページ）
   end
 
   def new
@@ -65,12 +65,21 @@ class TweetsController < ApplicationController
 
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)
-    # コメント機能追加
+    # コメント機能追加実装
   end
 
   def search
+    @tweets = Tweet.search(params[:keyword])
+  end
+    # 変数（あだ名付けれる空箱）＝モデム名.アクション名
+  
+  def plus
   end
   
+  
+  
+
+
   # 未だわからん
   private
   # プライベートメソッドはアクセスを制約する為のメソッド
