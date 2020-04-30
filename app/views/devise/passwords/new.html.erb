@@ -11,6 +11,123 @@
   <div class="actions">
     <%= f.submit "Send me reset password instructions" %>
   </div>
-<% end %>
 
+  
+  <div class="first-name_forms">
+    <div class="first-name_title"></div>
+    <div class="first-name"></div>
+  </div>
+
+  <div class="second-name_forms">
+    <div class="second-name_title"></div>
+    <div class="second-name"></div>
+  </div>
+
+  <div class="addres">
+  <div class="t_names_form">
+  <div class="t_names_form__group3">
+  <div class="t_names_member">
+  <div class="t_names_number">
+  郵便番号
+  </div>
+  <div class="t_names_hissu">
+  必須
+  </div>
+  </div>
+  <input class="t_names_input" placeholder="例)123-456" type="text" name="user[addresses_attributes][0][postal_code]" id="user_addresses_attributes_0_postal_code">
+  </div>
+  <div class="t_names_form__group4">
+  <div class="t_names_member">
+  <div class="t_names_number">
+  都道府県
+  </div>
+  <div class="t_names_hissu">
+  必須
+  </div>
+  </div>
+  <select class="t_delivery_form" name="user[addresses_attributes][0][prefectures]" id="user_addresses_attributes_0_prefectures"><option value="0">選択してください</option>
+  <option value="28">東京都</option>
+  <option value="27">大阪府</option>
+  <option value="14">神奈川県</option>
+  <option value="23">愛知県</option>
+  <option value="1">北海道</option>
+  <option value="2">青森県</option>
+  <option value="3">岩手県</option>
+  <option value="4">宮城県</option>
+  <option value="6">秋田県</option>
+  <option value="7">山形県</option>
+  <option value="8">福島県</option>
+  <option value="9">茨城県</option>
+  <option value="10">栃木県</option>
+  <option value="11">群馬県</option>
+  <option value="12">埼玉県</option>
+  <option value="13">千葉県</option>
+  <option value="15">新潟県</option>
+  <option value="16">富山県</option>
+  <option value="17">石川県</option>
+  <option value="18">福井県</option>
+  <option value="19">長野県</option>
+  <option value="20">山梨県</option>
+  <option value="21">岐阜県</option>
+  <option value="22">静岡県</option>
+  <option value="24">三重県</option>
+  <option value="25">滋賀県</option>
+  <option value="26">京都府</option>
+  <option value="28">兵庫県</option>
+  <option value="29">奈良県</option>
+  <option value="30">和歌山県</option>
+  <option value="31">鳥取県</option>
+  <option value="32">島根県</option>
+  <option value="33">岡山県</option>
+  <option value="34">広島県</option>
+  <option value="35">山口県</option>
+  <option value="36">徳島県</option>
+  <option value="37">香川県</option>
+  <option value="38">愛媛県</option>
+  <option value="39">高知県</option>
+  <option value="40">福岡県</option>
+  <option value="41">佐賀県</option>
+  <option value="42">長崎県</option>
+  <option value="43">熊本県</option>
+  <option value="44">大分県</option>
+  <option value="46">宮崎県</option>
+  <option value="47">鹿児島県</option>
+  <option value="50">沖縄県</option>
+  <option value="51">未定</option></select>
+  </div>
+  <div class="t_names_form__group5">
+  <div class="t_names_member">
+  <div class="t_names_number">
+  市区町村
+  </div>
+  <div class="t_names_hissu">
+  必須
+  </div>
+  </div>
+  <input class="t_names_input" placeholder="例)大阪市北区" type="text" name="user[addresses_attributes][0][municipalities]" id="user_addresses_attributes_0_municipalities">
+  </div>
+  <div class="t_names_form__group6">
+  <div class="t_names_member">
+  <div class="t_names_number">
+  番地
+  </div>
+  <div class="t_names_hissu">
+  必須
+  </div>
+  </div>
+  <input class="t_names_input" placeholder="例)梅田1−1−1" type="text" name="user[addresses_attributes][0][house_number]" id="user_addresses_attributes_0_house_number">
+  </div>
+  <div class="t_names_form__group7">
+  <div class="t_names_member">
+  <div class="t_names_number">
+  建物名
+  </div>
+  <div class="t_names_hissu">
+  任意
+  </div>
+  </div>
+  <input class="t_names_input" placeholder="例)梅田ビル20F" type="text" name="user[addresses_attributes][0][room_number]" id="user_addresses_attributes_0_room_number">
+  </div>
+  </div>
+<% end %> 
 <%= render "devise/shared/links" %>
