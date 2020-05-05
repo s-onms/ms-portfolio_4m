@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-http://18.177.97.162/tweets/new
+![個人アプリ_投稿画面](://18.177.97.162/tweets/new)
