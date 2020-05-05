@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-2020-05-05 16.52.06.png
+http://18.177.97.162/tweets/new
