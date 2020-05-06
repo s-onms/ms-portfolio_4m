@@ -39,7 +39,14 @@ $white: white;
 
 body,html {
   height: 100%;
-  background-color: $lightGray;
+  // background-color: $lightGray;
+
+  // 背景画像の大きさ調整
+  background-size: 2600px 1380px;
+  // 背景のスクロール固定
+  background-attachment:fixed;
+
+
 }
 
 body {
@@ -402,6 +409,7 @@ footer {
 // ページネーション
 .pagination{
   font-size: 18px;
+  color:red;
 }
 
 // マイページニックネーム
