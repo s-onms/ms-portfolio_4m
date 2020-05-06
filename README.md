@@ -30,7 +30,7 @@ Things you may want to cover:
 アプリ名<br>
 ・オリンピック2021紹介サイト
 
-説明<br>
+description<br>
 ・画像投稿機能<br>
 ・コメント機能<br>
 ・ログイン機能<br>
