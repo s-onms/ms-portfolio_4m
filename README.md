@@ -23,7 +23,8 @@ Things you may want to cover:
 
 * ...
 
-![個人アプリ_投稿画面](.images/2020_04_15_13.01.45.jpg)
+![個人アプリ_投稿画面](app/assets/images/2020_04_15_13.01.45.jpg
+)
 
 
 アプリ名<br>
