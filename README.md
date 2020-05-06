@@ -27,16 +27,21 @@ Things you may want to cover:
 )
 
 
-アプリ名<br>
+# App<br>
 ・オリンピック2021紹介サイト
 
-description<br>
-・画像投稿機能<br>
-・コメント機能<br>
+# Feature Description<br>
 ・ログイン機能<br>
+・画像投稿機能<br>
+・検索機能<br>
+・コメント機能<br>
 
-使い方<br>
-・
+# How to use使<br>
+・ユーザー登録後、出来る事<br>
+ ・画像を登録することが出来る。<br>
+ ・各画像にコメントを追記出来る。<br>
+ ・タイトル名から画像を検索することが出来る。<br>
+
 構築やインストール方法<br>
 ・
 ライセンス<br>
