@@ -28,7 +28,7 @@ Things you may want to cover:
 
 
 # App<br>
-・オリンピック2021紹介サイト
+・2020 Plus1　(2021年東京オリンピック紹介、応援サイト）
 
 # Feature Description<br>
 ・ログイン機能<br>
