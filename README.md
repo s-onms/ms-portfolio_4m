@@ -36,7 +36,7 @@ Things you may want to cover:
 ・検索機能<br>
 ・コメント機能<br>
 
-# How to use使<br>
+# How to use<br>
 ・ユーザー登録後、出来る事<br>
  ・画像を登録することが出来る。<br>
  ・各画像にコメントを追記出来る。<br>
