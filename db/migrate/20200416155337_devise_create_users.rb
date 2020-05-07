@@ -11,9 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       # 氏名追加
       t.string :first_name, null: false
-      t.string :second_name, null: false
-      t.string :first_kana, null: false
-      t.string :second_kana, null: false
+      t.string :kana, null: false
 
       ## Recoverable
       t.string   :reset_password_token
