@@ -61,3 +61,7 @@
 #   }
 
 server '18.177.97.162', user: 'ec2-user', roles: %w{app db web}
+
+# Basic認証はデプロイ時だけに実装する設定
+set :rails_env, "production"
+set :unicorn_rack_env, "production"
