@@ -45,6 +45,8 @@ Things you may want to cover:
 制作意図<br>
 今後の課題<br>
 なぜこの機能を作成したのか<br>
+URL<br>
+
 
 構築やインストール方法<br>
 ・
