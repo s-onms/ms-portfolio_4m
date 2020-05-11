@@ -28,7 +28,7 @@ Things you may want to cover:
 
 # App<br>
 ・2020 Plus1　(2021年東京オリンピック紹介、応援サイト）<br>
-http://18.177.97.162/
+　http://18.177.97.162/
 
 # Feature Description<br>
 ・ログイン機能<br>
