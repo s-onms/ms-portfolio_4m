@@ -30,9 +30,10 @@
   <%# ↓コメント機能のビュー %>
   <div class="container">
     <% if current_user %>
-      <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+      <%# ↓非同期通信で下記３行修正 %>
+      <%= form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form| %> 
+        <%= form.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox" %>
+        <%= form.submit "SEND", class: "form__submit" %>
       <% end %>
     <% else %>
       <strong><p>※※※ コメント投稿には新規登録/ログインが必要です ※※※</p></strong>
