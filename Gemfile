@@ -83,3 +83,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
 end
+
+# Use jquery as the JavaScript library
+# 非同期通信で利用
+gem 'jquery-rails'
