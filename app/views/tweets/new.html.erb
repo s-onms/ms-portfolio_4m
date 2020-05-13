@@ -6,8 +6,8 @@
         投稿する
       </h3>
       <%# <%= form.text_field :name, placeholder: "Nickname" %> 
-      <%= form.text_field :image, placeholder: "Image Url" %>
-      <%= form.text_area :text, placeholder: "" , rows: "10" %>
+      <%= form.text_field :image, placeholder: "Image Url（必須）" %>
+      <%= form.text_area :text, placeholder: "コメント（必須）" , rows: "10" %>
       <%= form.submit "SEND" %>
     <% end %>
   </div>
