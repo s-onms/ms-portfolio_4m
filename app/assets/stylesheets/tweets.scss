@@ -12,7 +12,9 @@
 
       // background-image:url("/images/2020_04_15_13.01.45.png") ;
       // ↑image-urlだった
-      background: url("/images/2020_04_15_13.01.45.png") ;
+
+      // ✖️background: url("/images/2020_04_15_13.01.45.png") ;
+      background: image-url("/images/2020_04_15_13.01.45.png") ;
 
 
       // 背景画像の大きさ調整
