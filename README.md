@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 ![個人アプリ_投稿画面](tokyo2020plus_st.jpg）
-)
+
 
 # App<br>
 ・2020 Plus1　(2021年東京オリンピック紹介、応援サイト）<br>
@@ -49,3 +49,6 @@ Things you may want to cover:
 ・バリデーションの追加実装（登録条件を満たさない場合などに、ユーザー側からエラーと分かるようにビューの修正）<br>
 ・ビューの追加、修正実装（背景画像の追加、コメント場所表示場所の修正）<br>
 etc
+
+# Author
+作成者 Sadao Matsui
