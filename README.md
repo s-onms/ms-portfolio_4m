@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-![個人アプリ_投稿画面](tokyo2020plus_st.jpg）
+![個人アプリ_投稿画面](https://github.com/s-onms/ms-portfolio_4m/blob/master/tokyo2020plus_st.jpg）
 
 
 # App<br>
