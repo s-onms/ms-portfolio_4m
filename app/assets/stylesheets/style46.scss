@@ -8,8 +8,8 @@
  */
 @font-face {
     // フォント追加したい場合はここ
-    font-family: 'ほのか明朝';
-    src: url('font_1_honokamin.ttf') format('truetype');
+    // font-family: 'ほのか明朝';
+    // src: url('font_1_honokamin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -390,10 +390,12 @@ footer {
 
 .search-form {
   text-align: center;
-  padding-top: 32px;
+  padding-top: 27px;
+  position: fixed;
   .search-input {
     width: 20%;
     margin-right: 10px;
+    
   }
 
   .search-btn {
@@ -419,4 +421,8 @@ footer {
 }
 h1.grid-6{
   padding: 6px 0 0 0;
+}
+.contents.all{
+  background-image:url("/images/tokyo2020plus_st.jpg"); 
+  background-attachment:fixed;
 }

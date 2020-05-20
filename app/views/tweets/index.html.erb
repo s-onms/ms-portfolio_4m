@@ -13,15 +13,17 @@
 <%# ↑検索機能を実装 %>
 
 <%# トップページ %>
-<div class="contents row">
+<div class="contents all">
+  <div class="contents row">
 
-  <% @tweets.each do |tweet| %>
-  <%# each文で全てのツイートを表示させる %>
+    <% @tweets.each do |tweet| %>
+    <%# each文で全てのツイートを表示させる %>
 
-    <%= render partial: "tweet", locals: { tweet: tweet } %>
-    <%# each〜endの間を全部、部分テンプレートで置き換え。可読性アップ。 %>
-  <% end %>
-  <%= paginate(@tweets) %>
-  <%# paginateメソッド：ページネーションのリンクを表示したいときに使用するメソッド %>
+      <%= render partial: "tweet", locals: { tweet: tweet } %>
+      <%# each〜endの間を全部、部分テンプレートで置き換え。可読性アップ。 %>
+    <% end %>
+    <%= paginate(@tweets) %>
+    <%# paginateメソッド：ページネーションのリンクを表示したいときに使用するメソッド %>
+  </div>
 </div>
-<%# git ステータスの検証の為追記 %>
+
