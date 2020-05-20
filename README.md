@@ -23,8 +23,8 @@ Things you may want to cover:
 
 * ...
 
-![個人アプリ_投稿画面](https://github.com/s-onms/ms-portfolio_4m/blob/master/tokyo2020plus_st.jpg）
-
+![個人アプリ_投稿画面](./images/tokyo2020plus_st.jpg）
+/Users/matsui/Desktop/1.11_after-basic/ms-portfolio_4m/public/images/tokyo2020plus_st.jpg
 
 # App<br>
 ・2020 Plus1　(2021年東京オリンピック紹介、応援サイト）<br>
