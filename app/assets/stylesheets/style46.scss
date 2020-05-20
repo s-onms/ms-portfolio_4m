@@ -42,7 +42,7 @@ body,html {
   // background-color: $lightGray;
 
   // 背景画像の大きさ調整
-  background-size: 2600px 1380px;
+  // background-size: 2600px 1380px;
   // 背景のスクロール固定
   background-attachment:fixed;
 
@@ -424,5 +424,6 @@ h1.grid-6{
 }
 .contents.all{
   background-image:url("/images/tokyo2020plus_st.jpg"); 
+  background-size: 2600px 1380px;
   background-attachment:fixed;
 }
