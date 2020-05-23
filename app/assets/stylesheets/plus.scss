@@ -1,4 +1,45 @@
+.plus-header{
+  width:300px;
+  height:300px;
+  margin:auto;
+
+
+}
+
+.k_main{
+  &__mainVisual{
+    position: relative;
+    &__content{
+      // background-color: cover;
+      width: 100vw;
+      height:100vw;
+      // background-color: cornflowerblue;
+
+      // background-image:url("/images/2020_04_15_13.01.45.png") ;
+      // ↑image-urlだった
+
+      background-image:url("/images/2020_04_15_13.01.45.png");
+      // ✖️background: url("/images/2020_04_15_13.01.45.png") ;
+      // ✖️background: image-url("/images/2020_04_15_13.01.45.png") ;
+
+      // 背景画像の大きさ調整
+      background-size: 2500px 1380px;
+      // 背景のスクロール固定
+      background-attachment:fixed;
+    }
+  }
+}
+
 .select-sports{
   margin:auto;
   width: 30%;
+}
+
+.image-link {
+  width:1800px;
+  height:1500px;
+  .img{
+    width:1000px;
+    height:1000px;
+  }
 }
