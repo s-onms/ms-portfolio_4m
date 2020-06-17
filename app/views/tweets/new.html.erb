@@ -3,10 +3,10 @@
   <div class="container">
     <%= form_with(model: @tweet, local: true) do |form| %>
       <h3>
-        投稿する（テスト：修正可否）
+        投稿する
       </h3>
       <%# <%= form.text_field :name, placeholder: "Nickname" %> 
-      <%= form.text_field :image, placeholder: "Image Url（必須）" %>
+      <%= form.text_field :image, placeholder: "Image URL（必須）" %>
       <%= form.text_area :text, placeholder: "コメント（必須）" , rows: "10" %>
       <%= form.submit "SEND" %>
     <% end %>
