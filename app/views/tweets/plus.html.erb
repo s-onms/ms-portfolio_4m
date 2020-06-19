@@ -27,34 +27,37 @@
   
   <div class='select-sports'>
     <p>好きなスポーツ</p>
-    <select name="Favorite competition">
+      <form>
+      <select name="sel2">
+      <option value="#"></option>
       <option value="選択してください">選択してください</option>
-      <option value="陸上">陸上</option>
-      <option value="水泳">水泳</option>
-      <option value="サッカー">サッカー</option>
-      <option value="野球">野球</option>
-      <option value="ソフトボール">ソフトボール</option>
-      <option value="ハンドボール">ハンドボール</option>
-      <option value="バスケットボール">バスケットボール</option>
-      <option value="バレーボール">バレーボール</option>
-      <option value="ホッケー">ホッケー</option>
-      <option value="ラグビー">ラグビー</option>
-      <option value="カヌー">カヌー</option>
-      <option value="ヨット">ヨット</option>
-      <option value="卓球">卓球</option>
-      <option value="テニス">テニス</option>
-      <option value="バドミントン ">バドミントン </option>
-      <option value="柔道">柔道</option>
-      <option value="空手">空手</option>
-      <option value="フェンシング">フェンシング</option>
-      <option value="アーチェリー">アーチェリー</option>
-      <option value="体操">体操</option>
-      <option value="バイク">バイク</option>
-      <option value="近代五種">近代五種</option>
-      <option value="ゴルフ">ゴルフ</option>
-      <option value=""></option>
-      
-    </select>
+      <option value="https://tokyo2020.org/ja/sports/athletics/">陸上</option>
+      <option value="https://tokyo2020.org/ja/sports/swimming/">水泳</option>
+      <option value="https://tokyo2020.org/ja/sports/baseball-softball/">野球・ソフトボール</option>
+      <option value="https://tokyo2020.org/ja/sports/football/">サッカー</option>
+      <option value="https://tokyo2020.org/ja/sports/handball/">ハンドボール</option>
+      <option value="https://tokyo2020.org/ja/sports/basketball/">バスケットボール</option>
+      <option value="https://tokyo2020.org/ja/sports/volleyball/">バレーボール</option>
+      <option value="https://tokyo2020.org/ja/sports/hockey/">ホッケー</option>
+      <option value="https://tokyo2020.org/ja/sports/rugby/">ラグビー</option>
+      <option value="https://tokyo2020.org/ja/sports/canoe-slalom/">カヌー</option>
+      <option value="https://tokyo2020.org/ja/sports/sailing/">セーリング</option>
+      <option value="https://tokyo2020.org/ja/sports/table-tennis/">卓球</option>
+      <option value="https://tokyo2020.org/ja/sports/tennis/">テニス</option>
+      <option value="https://tokyo2020.org/ja/sports/badminton/ ">バドミントン </option>
+      <option value="https://tokyo2020.org/ja/sports/judo/">柔道</option>
+      <option value="https://tokyo2020.org/ja/sports/karate/">空手</option>
+      <option value="https://tokyo2020.org/ja/sports/fencing/">フェンシング</option>
+      <option value="https://tokyo2020.org/ja/sports/archery/">アーチェリー</option>
+      <option value="https://tokyo2020.org/ja/sports/artistic-gymnastics/">体操競技</option>
+      <option value="https://tokyo2020.org/ja/sports/weightlifting/">ウェイトリフティング</option>
+      <option value="https://tokyo2020.org/ja/sports/cycling-bmx-racing/">バイク（BMX）</option>
+      <option value="https://tokyo2020.org/ja/sports/modern-pentathlon/">近代五種</option>
+      <option value="https://tokyo2020.org/ja/sports/golf/">ゴルフ</option>
+      <option value="https://tokyo2020.org/ja/sports/triathlon/">トライアスロン</option>
+      </select>
+      <input type=button onClick="top.location.href=sel2.value" value="Jump!">
+      </form>
   </div>
     
   <div class="image-link">
@@ -62,15 +65,11 @@
     <%# <map name="ImageMap">
     <area shape="poly" coords="263,156,296,155,294,195,433,199,500,207,564,119,582,201,639,207,716,108,456,255,374,437,521,308,647,221,385,678,142,608,142,608,151,609,380,405,432,257,287,194,261,162,393,187,627,211,498,460,498,460" href="https://tokyo2020.org/ja/sports/cycling-bmx-racing/" alt="自転車競技1（BMXレーシング）のリンク" />
     </map> %>
-    <img src="/images/2020.png" usemap="#ImageMap" alt="自転車競技2（BMXレーシング）" />
-    <map name="ImageMap">
-      <%# <area shape="poly" coords="88,69,112,95,167,132,172,187,160,244,183,275,179,317,146,325,130,308,127,284,119,284,108,270,95,258,84,251,76,268,58,268,51,268,35,263,29,243,23,231,23,220,33,219,48,208,48,208" href="/" alt="リンク貼り付け" /> %>
-    </map>
   </div>
     <img src="/images/2020-05-25 23.40.11.png" usemap="#ImageMap" href="https://tokyo2020.org/ja/sports/tennis/" width="1200px" height="400px" alt="競泳"/>
-    <img src="/images/2020-05-25 23.39.33.png" usemap="#ImageMap" href="https://tokyo2020.org/ja/sports/tennis/"  width="1200px" height="400px" alt="野球"/>
     <img src="/images/2020_tennis.png" usemap="#ImageMap" href="https://tokyo2020.org/ja/sports/tennis/" width="1200px" height="400px" alt="テニス"/>
     <map name="ImageMap">
       <area shape="poly" coords="12,6,1011,472"  alt="テニスのリンク"/>
     </map>
+    <img src="/images/2020-05-25 23.39.33.png" usemap="#ImageMap" href="https://tokyo2020.org/ja/sports/tennis/"  width="1200px" height="400px" alt="野球"/>
     <img src="/images/2020-05-25 23.39.44.png" usemap="#ImageMap" href="https://tokyo2020.org/ja/sports/tennis/" width="1200px" height="400px" alt="バスケットボール"/>
