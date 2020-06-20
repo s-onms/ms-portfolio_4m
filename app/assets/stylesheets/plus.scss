@@ -1,9 +1,5 @@
+// 言語選択の箇所
 .plus-header{
-  // width:300px;
-  // height:300px;
-  // margin:auto;
-
-
 }
 
 .k_main{
@@ -30,16 +26,30 @@
   }
 }
 
+// 好きなスポーツの選択
 .select-sports{
   margin:auto;
   width: 30%;
 }
 
+// BMXの画像
 .image-link {
-  width:1800px;
-  height:1500px;
+  // width:1800px;
+  // height:1500px;
+  text-align: center;
+  margin:auto;
   .img{
     width:1000px;
     height:1000px;
+    text-align: center;
+    
   }
+}
+// 会場
+.venue-place{
+  font-size: 26px;
+}
+// 4種目イメージ画像
+.image-discipline{
+  text-align:center;
 }
