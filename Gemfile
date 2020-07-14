@@ -87,3 +87,6 @@ end
 # Use jquery as the JavaScript library
 # 非同期通信で利用
 gem 'jquery-rails'
+
+
+gem 'mini_magick'
