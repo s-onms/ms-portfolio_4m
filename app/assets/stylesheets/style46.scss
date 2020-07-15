@@ -10,8 +10,8 @@
     // フォント追加したい場合はここ
     // font-family: 'ほのか明朝';
     // src: url('font_1_honokamin.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @import url(http://fonts.googleapis.com/css?family=Unica+One);
@@ -23,8 +23,6 @@ $darkGray: #999999;
 $gray: #D8D8D8;
 $lightGray: #f5f5f3;
 $white: white;
-
-//mixin
 
 @mixin boxBase($margin: 30px auto, $padding: 10px) {
   margin: $margin;
@@ -63,7 +61,7 @@ line-height: 1.57;
 
 a {
   text-decoration: none;
-  color: $dark;
+  color: cornflowerblue;
   @extend .transition;
   &:hover {
     color: $accent;
@@ -92,6 +90,7 @@ a {
   @include transition-timing-function(linear);
 }
 
+// 投稿ボタン
 .btn {
     @include basePadding(9px 10px);
     font-size: 17px;
@@ -106,9 +105,6 @@ a {
     border-color: lighten($accent, 15%);
     color: lighten($accent, 15%);
   }
-}
-
-h1,h2,h3,h4,h5,h6 {
 }
 
 .title {
@@ -140,6 +136,7 @@ header.header {
       font-size: 20px;
       line-height: 41px;
       float: left;
+      margin-left: 200px;
       a {
         display: block;
       }
@@ -404,7 +401,7 @@ footer {
 
 // ヘッダー幅
 .header__bar.row{
-  max-width: 1100px;
+  max-width: 1400px;
 }
 
 // ページネーション
@@ -425,4 +422,11 @@ h1.grid-6{
   background-image:url("/images/tokyo2020plus_st.jpg"); 
   background-size: 2600px 1380px;
   background-attachment:fixed;
+}
+
+.title_2020{
+  font-size:22px;
+  
+  // 横並びにする
+  float: left;
 }
