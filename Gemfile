@@ -88,5 +88,6 @@ end
 # 非同期通信で利用
 gem 'jquery-rails'
 
-
+# 投稿画像の大きさを指定する
 gem 'mini_magick'
+gem 'carrierwave'
