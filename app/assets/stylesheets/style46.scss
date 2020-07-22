@@ -127,11 +127,12 @@ header.header {
   height: 75px;
   div.header__bar.row {
     position: relative;
+    margin:auto;
     h1.grid-6 {
       font-size: 20px;
       line-height: 41px;
       float: left;
-      margin-left: 200px;
+      // margin-left: 200px;
       a {
         display: block;
       }
