@@ -48,7 +48,7 @@ body {
 
 h1,h2,h3,h4,h5,h6,body {
   line-height: 1.57;
-  letter-spacing: 0.15em;
+  // letter-spacing: 0.15em;
   font-size: 16px;
   color: $dark;
   margin: 0;
@@ -435,6 +435,12 @@ h1.grid-6{
   float: left;
 }
 
+// ヘッダー右側
+.user_nav grid-6{
+  .span{
+    width:200px;
+  }
+}
 
 .example3 li {
   display: inline-block;
